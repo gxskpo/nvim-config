@@ -13,7 +13,8 @@ function toggle_buffer_neotree()
     end
 end
 
-vim.api.nvim_set_keymap('n', '<C-f>', "<CMD>lua toggle_buffer_neotree()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-f>', "<CMD>lua toggle_buffer_neotree()<CR>",
+                        {noremap = true})
 
 -- telescope
 
@@ -36,7 +37,9 @@ vim.keymap.set('n', '<leader>.', "<CMD>BufDel<CR>", {})
 -- vim.api.nvim_set_keymap('n', '<leader>ss', '<CMD>SSFocused<CR>', { noremap = false })
 
 -- temporary solution as long SSFocused doesn't apply the theme properly
-vim.api.nvim_set_keymap('n', '<leader>ss', 'ggVG:SSSelected<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ss', 'ggVG:SSSelected<CR>',
+                        {noremap = true, silent = true})
 
 -- visual mode
-vim.api.nvim_set_keymap('v', '<leader>ss', ':<C-U>SSSelected<CR>', { noremap = false })
+vim.api.nvim_set_keymap('v', '<leader>ss', ':<C-U>SSSelected<CR>',
+                        {noremap = false})

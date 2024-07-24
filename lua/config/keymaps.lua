@@ -34,12 +34,12 @@ vim.keymap.set('n', '<leader>.', "<CMD>BufDel<CR>", {})
 
 -- normal mode
 
--- vim.api.nvim_set_keymap('n', '<leader>ss', '<CMD>SSFocused<CR>', { noremap = false })
+vim.api.nvim_set_keymap('v', '<leader>sf', '<CMD>SSFocused<CR>',
+                        {noremap = false})
 
--- temporary solution as long SSFocused doesn't apply the theme properly
+-- temporary solution as long SSFocused doesn't have command to capture the whole file 
 vim.api.nvim_set_keymap('n', '<leader>ss', 'ggVG:SSSelected<CR>',
                         {noremap = true, silent = true})
 
--- visual mode
 vim.api.nvim_set_keymap('v', '<leader>ss', ':<C-U>SSSelected<CR>',
                         {noremap = false})

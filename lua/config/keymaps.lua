@@ -43,3 +43,7 @@ vim.api.nvim_set_keymap('n', '<leader>ss', 'ggVG:SSSelected<CR>',
 
 vim.api.nvim_set_keymap('v', '<leader>ss', ':<C-U>SSSelected<CR>',
                         {noremap = false})
+
+vim.api.nvim_set_keymap('n', '¿', ':lua vim.diagnostic.open_float()<CR>',
+                        {noremap = true, silent = true})
+

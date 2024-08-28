@@ -1,2 +1,2 @@
-require("zero")
-require("cmp")
+require("lsp.zero")
+require("lsp.cmp")

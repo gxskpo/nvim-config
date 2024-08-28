@@ -1,2 +1,2 @@
-require("mason")
-require("cmp")
+require("lsp.mason")
+require("lsp.cmp")

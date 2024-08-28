@@ -1,2 +1,2 @@
-require("mason")
+require("zero")
 require("cmp")

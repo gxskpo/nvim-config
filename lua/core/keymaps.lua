@@ -1,5 +1,6 @@
--- telescope
+vim.keymap.set('n', '<C-f>', '<CMD>Neotree<CR>')
 
+-- telescope
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})

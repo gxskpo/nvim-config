@@ -1,5 +1,17 @@
 return {
-    {"nvim-telescope/telescope.nvim"}, {
+    {
+        "nvim-telescope/telescope.nvim",
+        config = function()
+            require("telescope").setup({
+                defaults = {
+                    file_ignore_patterns = {
+                        "node_modules/", "target/", "[Bb]in/", "obj/"
+                    }
+                }
+            })
+        end
+
+    }, {
         "vyfor/cord.nvim",
         build = "./build",
         event = "VeryLazy",

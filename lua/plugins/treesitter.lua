@@ -10,9 +10,8 @@ return {
         },
         dependencies = {{"nushell/tree-sitter-nu"}},
         config = function()
-            require("nvim-treesitter.configs").setup({
-                highlight = {enable = true}
-            })
+            local configs = require("nvim-treesitter.configs")
+            configs.setup({highlight = {enable = true}})
         end
     }
 }

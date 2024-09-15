@@ -26,4 +26,6 @@ vim.api.nvim_set_keymap('v', '<leader>ss', ':<C-U>SSSelected<CR>',
 
 vim.api.nvim_set_keymap('n', '¿', ':lua vim.diagnostic.open_float()<CR>',
                         {noremap = true, silent = true})
-
+			vim.api.nvim_set_keymap('n', '<leader>|',':noh<CR>', {
+			  noremap = true, silent = true
+			})

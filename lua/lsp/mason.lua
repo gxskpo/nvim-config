@@ -23,7 +23,7 @@ mason_lspconfig.setup_handlers({
         lspconfig.rust_analyzer.setup({
             on_attach = on_attach,
             capabilities = capabilities,
-            settings = {["rust-analyzer"] = {}}
+            settings = {["rust-analyzer"] = {cargo = {features = {"ssr"}}}}
         })
     end
 })

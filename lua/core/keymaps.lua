@@ -5,6 +5,7 @@ local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>,', builtin.buffers, {})
+vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
 
 -- bufferline
 vim.keymap.set('n', '<S-l>', '<CMD>BufferLineCycleNext<CR>')
@@ -19,13 +20,12 @@ vim.api.nvim_set_keymap('v', '<leader>sf', '<CMD>SSFocused<CR>',
                         {noremap = false})
 
 vim.api.nvim_set_keymap('n', '<leader>ss', 'ggVG:SSSelected<CR>',
-                        {noremap = true, silent = true})
+                        {noremap = true, silent = false})
 
 vim.api.nvim_set_keymap('v', '<leader>ss', ':<C-U>SSSelected<CR>',
-                        {noremap = false})
+                        {noremap = false, silent = false})
 
 vim.api.nvim_set_keymap('n', '¿', ':lua vim.diagnostic.open_float()<CR>',
-                        {noremap = true, silent = true})
-			vim.api.nvim_set_keymap('n', '<leader>|',':noh<CR>', {
-			  noremap = true, silent = true
-			})
+                        {noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<leader>|', ':noh<CR>',
+                        {noremap = true, silent = false})

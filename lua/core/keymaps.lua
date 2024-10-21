@@ -16,8 +16,8 @@ vim.keymap.set('n', '<leader>.', "<CMD>BufDel<CR>", {})
 
 -- codeshot
 
-vim.api.nvim_set_keymap('v', '<leader>sf', '<CMD>SSFocused<CR>',
-                        {noremap = false})
+vim.api.nvim_set_keymap('v', '<leader>sf', ':<C-U>SSFocused<CR>',
+                        {noremap = true, silent = false})
 
 vim.api.nvim_set_keymap('n', '<leader>ss', 'ggVG:SSSelected<CR>',
                         {noremap = true, silent = false})
@@ -25,7 +25,12 @@ vim.api.nvim_set_keymap('n', '<leader>ss', 'ggVG:SSSelected<CR>',
 vim.api.nvim_set_keymap('v', '<leader>ss', ':<C-U>SSSelected<CR>',
                         {noremap = false, silent = false})
 
+-- diagnostics
+
 vim.api.nvim_set_keymap('n', '¿', ':lua vim.diagnostic.open_float()<CR>',
                         {noremap = true, silent = false})
+
 vim.api.nvim_set_keymap('n', '<leader>|', ':noh<CR>',
                         {noremap = true, silent = false})
+
+vim.keymap.set('v', '<leader>ga', function() vim.lsp.buf.code_action() end, {})

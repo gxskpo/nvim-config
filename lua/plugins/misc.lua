@@ -1,5 +1,5 @@
 return {
-    {"jiangmiao/auto-pairs"}, {"airblade/vim-gitgutter"}, {"sbdchd/neoformat"},
+    {"jiangmiao/auto-pairs"}, {"airblade/vim-gitgutter"},
     {
         "ojroques/nvim-bufdel",
         config = function()
